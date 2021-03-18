@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Web;
 using System.Web.Mvc;
+using CasoEstudioEgrasados.Models;
 
 namespace CasoEstudioEgrasados.Controllers
 {
@@ -11,7 +12,8 @@ namespace CasoEstudioEgrasados.Controllers
         // GET: Home
         public ActionResult Index()
         {
-            return View();
+            OperacionUsuario ou = new OperacionUsuario();
+            return View(ou.RecuperarTodos());
         }
 
         // GET: Home/Details/5

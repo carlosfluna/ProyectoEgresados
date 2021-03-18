@@ -48,7 +48,7 @@ namespace CasoEstudioEgrasados.Models
                 {
                     Usu_id = int.Parse(registros["usu_id"].ToString()),
                     Usu_documento = int.Parse(registros["usu_documento"].ToString()),
-                    Usu_tipodoc = registros["usu_tipodoc"].ToString(),
+                   /* Usu_tipodoc = registros["usu_tipodoc"].ToString(),
                     Usu_nombre = registros["usu_nombre"].ToString(),
                     Usu_celular = int.Parse(registros["usu_celular"].ToString()),
                     Usu_email = registros["usu_email"].ToString(),
@@ -60,7 +60,7 @@ namespace CasoEstudioEgrasados.Models
                     Usu_direccion = registros["usu_direccion"].ToString(),
                     Usu_barrio = registros["usu_barrio"].ToString(),
                     Usu_ciudad = registros["usu_ciudad"].ToString(),
-                    Usu_departamento = registros["usu_departamento"].ToString(),
+                    Usu_departamento = registros["usu_departamento"].ToString(),*/
                     Usu_fecharegistro = DateTime.Parse(registros["usu_fecharegistro"].ToString())
                 };
                 Usuarios.Add(usu);
