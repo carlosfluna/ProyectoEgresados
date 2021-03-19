@@ -12,7 +12,7 @@ namespace CasoEstudioEgrasados.Controllers
         // GET: Home
         public ActionResult Index()
         {
-            OperacionUsuario ou = new OperacionUsuario();
+            OperacionUsuarios ou = new OperacionUsuarios();
             return View(ou.RecuperarTodos());
         }
 
@@ -32,19 +32,19 @@ namespace CasoEstudioEgrasados.Controllers
         [HttpPost]
         public ActionResult Create(FormCollection collection)
         {
-            OperacionUsuario op = new OperacionUsuario();
+            OperacionUsuarios op = new OperacionUsuarios();
             Usuario usu = new Usuario
             {
                 Usu_documento = int.Parse(collection["usu_documento"]),
                 Usu_tipodoc = collection["usu_tipodoc"],
                 Usu_nombre = collection["usu_nombre"],
-                Usu_celular = int.Parse(collection["usu_celular"],
-                Usu_email = collection["usu_email"],
+                Usu_celular = int.Parse(collection["usu_celular"]),
+                Usu_email = collection["Usu_email"],
                 Usu_genero = collection["usu_genero"],
-                Usu_aprendiz = int.Parse(collection["usu_aprendiz"]),
-                Usu_egresado = int.Parse(collection["usu_egresado"]),
+                Usu_aprendiz = bool.Parse(collection["usu_aprendiz"]),
+                Usu_egresado = bool.Parse(collection["usu_egresado"]),
                 Usu_areaformacion = collection["usu_areaformacion"],
-                Usu_fechaegresado = collection["usu_fechaegresado"],
+                Usu_fechaegresado = DateTime.Parse(collection["usu_fechaegresado"].ToString()),
                 Usu_direccion = collection["usu_direccion"],
                 Usu_barrio = collection["usu_barrio"],
                 Usu_ciudad = collection["usu_ciudad"],

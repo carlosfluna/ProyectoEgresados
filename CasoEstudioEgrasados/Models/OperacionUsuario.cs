@@ -5,11 +5,10 @@ using System.Web;
 using System.Configuration;
 using System.Data;
 using System.Data.SqlClient;
-//using CasoEstudioEgrasados.Models;
 
 namespace CasoEstudioEgrasados.Models
 {
-    public class OperacionUsuario
+    public class OperacionUsuarios
     {
         private SqlConnection con;
         private void Conectar()
@@ -38,20 +37,20 @@ namespace CasoEstudioEgrasados.Models
             comando.Parameters.Add("@usu_ciudad", SqlDbType.VarChar);
             comando.Parameters.Add("@usu_departamento", SqlDbType.VarChar);
 
-            comando.Parameters["@usu_documento"].Value = usu_documento;
-            comando.Parameters["@usu_tipodoc"].Value = usu_tipodoc;
-            comando.Parameters["@usu_nombre"].Value = usu_nombre;
-            comando.Parameters["@Usu_celular"].Value = usu_celular;
-            comando.Parameters["@usu_email"].Value = usu_email;
-            comando.Parameters["@usu_genero"].Value = usu_genero;
-            comando.Parameters["@Usu_aprendiz"].Value = usu_aprendiz;
-            comando.Parameters["@Usu_egresado"].Value = usu_egresado;
-            comando.Parameters["@Usu_areaformacion"].Value = usu_areaformacion;
-            comando.Parameters["@Usu_fechaegresado"].Value = usu_fechaegresado;
-            comando.Parameters["@Usu_direccion"].Value = usu_direccion;
-            comando.Parameters["@usu_barrio"].Value = usu_barrio;
-            comando.Parameters["@usu_ciudad"].Value = usu_ciudad;
-            comando.Parameters["@usu_departamento"].Value = usu_departamento;
+            comando.Parameters["@usu_documento"].Value = usu.Usu_documento;
+            comando.Parameters["@usu_tipodoc"].Value = usu.Usu_tipodoc;
+            comando.Parameters["@usu_nombre"].Value = usu.Usu_nombre;
+            comando.Parameters["@Usu_celular"].Value = usu.Usu_celular;
+            comando.Parameters["@usu_email"].Value = usu.Usu_email;
+            comando.Parameters["@usu_genero"].Value = usu.Usu_genero;
+            comando.Parameters["@Usu_aprendiz"].Value = usu.Usu_aprendiz;
+            comando.Parameters["@Usu_egresado"].Value = usu.Usu_egresado;
+            comando.Parameters["@Usu_areaformacion"].Value = usu.Usu_areaformacion;
+            comando.Parameters["@Usu_fechaegresado"].Value = usu.Usu_fechaegresado;
+            comando.Parameters["@Usu_direccion"].Value = usu.Usu_direccion;
+            comando.Parameters["@usu_barrio"].Value = usu.Usu_barrio;
+            comando.Parameters["@usu_ciudad"].Value = usu.Usu_ciudad;
+            comando.Parameters["@usu_departamento"].Value = usu.Usu_departamento;
             con.Open();
         int i = comando.ExecuteNonQuery();
         con.Close();
