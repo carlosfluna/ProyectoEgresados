@@ -72,7 +72,8 @@
             </div>
 
             <div class="form-group">
-                @Html.LabelFor(model => model.Usu_aprendiz, htmlAttributes: new { @class = "control-label col-md-2" })
+               <div class="control-label col-md-2">ES APRENDIZ</div>
+                 @*@Html.LabelFor(model => model.Usu_aprendiz, htmlAttributes: new { @class = "control-label col-md-2" })*@
                 <div class="col-md-10">
                     <div class="checkbox">
                         @Html.EditorFor(model => model.Usu_aprendiz)

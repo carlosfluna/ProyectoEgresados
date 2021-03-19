@@ -79,7 +79,7 @@ namespace CasoEstudioEgrasados.Models
                     Usu_aprendiz = bool.Parse(registros["usu_aprendiz"].ToString()),
                     Usu_egresado = bool.Parse(registros["usu_egresado"].ToString()),
                     Usu_areaformacion = registros["usu_areaformacion"].ToString(),
-                    Usu_fechaegresado = DateTime.Parse(registros["usu_fechaegresado"].ToString()),
+                    //Usu_fechaegresado = (registros["usu_fechaegresado"].ToString()),
                     Usu_direccion = registros["usu_direccion"].ToString(),
                     Usu_barrio = registros["usu_barrio"].ToString(),
                     Usu_ciudad = registros["usu_ciudad"].ToString(),
