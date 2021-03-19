@@ -5,6 +5,7 @@ using System.Web;
 using System.Configuration;
 using System.Data;
 using System.Data.SqlClient;
+//using CasoEstudioEgrasados.Models;
 
 namespace CasoEstudioEgrasados.Models
 {
@@ -16,24 +17,47 @@ namespace CasoEstudioEgrasados.Models
             string constr = ConfigurationManager.ConnectionStrings["administracion"].ToString();
             con = new SqlConnection(constr);
         }
-        /*
-    public int Alta(Usuarios usu)
+        
+    public int Alta(Usuario usu)
     {
         Conectar();
-        SqlCommand comando = new SqlCommand("insert into si_usuarios(codigo, descripcion, precio) values (@codigo, @descripcion, @precio)", con);
+        SqlCommand comando = new SqlCommand("insert into si_usuarios(usu_documento, usu_tipodoc, usu_nombre, usu_celular, usu_email, usu_genero, usu_aprendiz, usu_egresado, usu_areaformacion, usu_fechaegresado, usu_direccion, usu_barrio, usu_ciudad, usu_departamento) values (@usu_documento, @usu_tipodoc, @usu_nombre, @usu_celular, @usu_email, @usu_genero, @usu_aprendiz, @usu_egresado, @usu_areaformacion, @usu_fechaegresado, @usu_direccion, @usu_barrio, @usu_ciudad, @usu_departamento)", con);
 
-        comando.Parameters.Add("@codigo", SqlDbType.Int);
-        comando.Parameters.Add("@descripcion", SqlDbType.VarChar);
-        comando.Parameters.Add("@precio", SqlDbType.Float);
-        comando.Parameters["@codigo"].Value = usu.Codigo;
-        comando.Parameters["@descripcion"].Value = usu.Descripcion;
-        comando.Parameters["@precio"].Value = usu.Precio;
-        con.Open();
+            comando.Parameters.Add("@usu_documento", SqlDbType.BigInt);
+            comando.Parameters.Add("@usu_tipodoc", SqlDbType.VarChar);
+            comando.Parameters.Add("@usu_nombre", SqlDbType.VarChar);
+            comando.Parameters.Add("@Usu_celular", SqlDbType.Int);
+            comando.Parameters.Add("@usu_email", SqlDbType.VarChar);
+            comando.Parameters.Add("@usu_genero", SqlDbType.VarChar);
+            comando.Parameters.Add("@Usu_aprendiz", SqlDbType.Bit);
+            comando.Parameters.Add("@Usu_egresado", SqlDbType.Bit);
+            comando.Parameters.Add("@Usu_areaformacion", SqlDbType.VarChar);
+            comando.Parameters.Add("@Usu_fechaegresado", SqlDbType.DateTime);
+            comando.Parameters.Add("@Usu_direccion", SqlDbType.VarChar);
+            comando.Parameters.Add("@usu_barrio", SqlDbType.VarChar);
+            comando.Parameters.Add("@usu_ciudad", SqlDbType.VarChar);
+            comando.Parameters.Add("@usu_departamento", SqlDbType.VarChar);
+
+            comando.Parameters["@usu_documento"].Value = usu_documento;
+            comando.Parameters["@usu_tipodoc"].Value = usu_tipodoc;
+            comando.Parameters["@usu_nombre"].Value = usu_nombre;
+            comando.Parameters["@Usu_celular"].Value = usu_celular;
+            comando.Parameters["@usu_email"].Value = usu_email;
+            comando.Parameters["@usu_genero"].Value = usu_genero;
+            comando.Parameters["@Usu_aprendiz"].Value = usu_aprendiz;
+            comando.Parameters["@Usu_egresado"].Value = usu_egresado;
+            comando.Parameters["@Usu_areaformacion"].Value = usu_areaformacion;
+            comando.Parameters["@Usu_fechaegresado"].Value = usu_fechaegresado;
+            comando.Parameters["@Usu_direccion"].Value = usu_direccion;
+            comando.Parameters["@usu_barrio"].Value = usu_barrio;
+            comando.Parameters["@usu_ciudad"].Value = usu_ciudad;
+            comando.Parameters["@usu_departamento"].Value = usu_departamento;
+            con.Open();
         int i = comando.ExecuteNonQuery();
         con.Close();
         return i;
     }
-    */
+    
         public List<Usuario> RecuperarTodos()
         {
             Conectar();
@@ -68,23 +92,68 @@ namespace CasoEstudioEgrasados.Models
             con.Close();
             return Usuarios;
         }
-        /*
-    public Usuarios Recuperar(int usu_documento)
+      /*  
+    public Usuario Recuperar(int usu_documento)
     {
         Conectar();
         SqlCommand comando = new SqlCommand("select * from si_usuarios where usu_documento = @usu_documento", con);
 
 
-        comando.Parameters.Add("@usu_documento", SqlDbType.Int);
-        comando.Parameters["@usu_documento"].Value = usu_documento;
-        con.Open();
+            comando.Parameters.Add("@usu_id", SqlDbType.Int);
+            comando.Parameters["@usu_id"].Value = usu_id;
+
+            comando.Parameters.Add("@usu_documento", SqlDbType.Int);
+            comando.Parameters["@usu_documento"].Value = usu_documento;
+
+            comando.Parameters.Add("@usu_tipodoc", SqlDbType.Int);
+            comando.Parameters["@usu_tipodoc"].Value = usu_tipodoc;
+
+            comando.Parameters.Add("@usu_nombre", SqlDbType.Int);
+            comando.Parameters["@usu_nombre"].Value = usu_nombre;
+
+            comando.Parameters.Add("@Usu_celular", SqlDbType.Int);
+            comando.Parameters["@Usu_celular"].Value = Usu_celular;
+
+            comando.Parameters.Add("@usu_email", SqlDbType.Int);
+            comando.Parameters["@usu_email"].Value = usu_email;
+
+            comando.Parameters.Add("@usu_genero", SqlDbType.Int);
+            comando.Parameters["@usu_genero"].Value = usu_genero;
+
+            comando.Parameters.Add("@Usu_aprendiz", SqlDbType.Int);
+            comando.Parameters["@Usu_aprendiz"].Value = Usu_aprendiz;
+
+            comando.Parameters.Add("@Usu_egresado", SqlDbType.Int);
+            comando.Parameters["@Usu_egresado"].Value = Usu_egresado;
+
+            comando.Parameters.Add("@Usu_areaformacion", SqlDbType.Int);
+            comando.Parameters["@Usu_areaformacion"].Value = Usu_areaformacion;
+
+            comando.Parameters.Add("@Usu_fechaegresado", SqlDbType.Int);
+            comando.Parameters["@Usu_fechaegresado"].Value = Usu_fechaegresado;
+
+            comando.Parameters.Add("@Usu_direccion", SqlDbType.Int);
+            comando.Parameters["@Usu_direccion"].Value = Usu_direccion;
+
+            comando.Parameters.Add("@usu_barrio", SqlDbType.Int);
+            comando.Parameters["@usu_barrio"].Value = usu_barrio;
+
+            comando.Parameters.Add("@usu_ciudad", SqlDbType.Int);
+            comando.Parameters["@usu_ciudad"].Value = usu_ciudad;
+
+            comando.Parameters.Add("@usu_departamento", SqlDbType.Int);
+            comando.Parameters["@usu_departamento"].Value = usu_departamento;
+
+            comando.Parameters.Add("@Usu_fecharegistro", SqlDbType.Int);
+            comando.Parameters["@Usu_fecharegistro"].Value = Usu_fecharegistro;
+            con.Open();
         SqlDataReader registros = comando.ExecuteReader();
-        Usuarios Usuarios = new Usuarios();
+        Usuario Usuarios = new Usuario();
         if (registros.Read())
         {
-            Usuarios.Usu_documento = int.Parse(registros["usu_documento"].ToString());
-            Usuarios.Descripcion = registros["descripcion"].ToString();
-            Usuarios.Precio = float.Parse(registros["precio"].ToString());
+            Usuario.Usu_documento = int.Parse(registros["usu_documento"].ToString());
+            Usuario.Descripcion = registros["descripcion"].ToString();
+            Usuario.Precio = float.Parse(registros["precio"].ToString());
         }
         con.Close();
         return Usuarios;

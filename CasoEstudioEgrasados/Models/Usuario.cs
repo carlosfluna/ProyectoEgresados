@@ -29,7 +29,6 @@ namespace CasoEstudioEgrasados.Models
         [Required(ErrorMessage = "El genero es obligatorio")]
         public string Usu_genero { get; set; }
 
-
         public bool Usu_aprendiz { get; set; }
 
         public bool Usu_egresado { get; set; }

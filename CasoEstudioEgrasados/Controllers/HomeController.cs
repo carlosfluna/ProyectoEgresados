@@ -32,16 +32,26 @@ namespace CasoEstudioEgrasados.Controllers
         [HttpPost]
         public ActionResult Create(FormCollection collection)
         {
-            try
+            OperacionUsuario op = new OperacionUsuario();
+            Usuario usu = new Usuario
             {
-                // TODO: Add insert logic here
-
-                return RedirectToAction("Index");
-            }
-            catch
-            {
-                return View();
-            }
+                Usu_documento = int.Parse(collection["usu_documento"]),
+                Usu_tipodoc = collection["usu_tipodoc"],
+                Usu_nombre = collection["usu_nombre"],
+                Usu_celular = int.Parse(collection["usu_celular"],
+                Usu_email = collection["usu_email"],
+                Usu_genero = collection["usu_genero"],
+                Usu_aprendiz = int.Parse(collection["usu_aprendiz"]),
+                Usu_egresado = int.Parse(collection["usu_egresado"]),
+                Usu_areaformacion = collection["usu_areaformacion"],
+                Usu_fechaegresado = collection["usu_fechaegresado"],
+                Usu_direccion = collection["usu_direccion"],
+                Usu_barrio = collection["usu_barrio"],
+                Usu_ciudad = collection["usu_ciudad"],
+                Usu_departamento = collection["usu_departamento"]
+            };
+            op.Alta(usu);
+            return RedirectToAction("Index");
         }
 
         // GET: Home/Edit/5
