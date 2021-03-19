@@ -35,16 +35,16 @@ namespace CasoEstudioEgrasados.Controllers
             OperacionUsuarios op = new OperacionUsuarios();
             Usuario usu = new Usuario
             {
-                Usu_documento = int.Parse(collection["usu_documento"]),
+                Usu_documento = long.Parse(collection["usu_documento"]),
                 Usu_tipodoc = collection["usu_tipodoc"],
                 Usu_nombre = collection["usu_nombre"],
                 Usu_celular = int.Parse(collection["usu_celular"]),
                 Usu_email = collection["Usu_email"],
                 Usu_genero = collection["usu_genero"],
-                Usu_aprendiz = bool.Parse(collection["usu_aprendiz"]),
-                Usu_egresado = bool.Parse(collection["usu_egresado"]),
+                Usu_aprendiz = bool.Parse(collection["usu_aprendiz"].ToString()),
+                Usu_egresado = bool.Parse(collection["usu_egresado"].ToString()),
                 Usu_areaformacion = collection["usu_areaformacion"],
-                Usu_fechaegresado = DateTime.Parse(collection["usu_fechaegresado"].ToString()),
+               // Usu_fechaegresado = collection["usu_fechaegresado"],
                 Usu_direccion = collection["usu_direccion"],
                 Usu_barrio = collection["usu_barrio"],
                 Usu_ciudad = collection["usu_ciudad"],

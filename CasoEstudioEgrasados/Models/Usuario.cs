@@ -35,7 +35,7 @@ namespace CasoEstudioEgrasados.Models
 
         public string Usu_areaformacion { get; set; }
 
-        public DateTime Usu_fechaegresado { get; set; }
+        public string Usu_fechaegresado { get; set; }
 
         [Required(ErrorMessage = "La direccion es obligatorio")]
         public string Usu_direccion { get; set; }

@@ -20,7 +20,7 @@ namespace CasoEstudioEgrasados.Models
     public int Alta(Usuario usu)
     {
         Conectar();
-        SqlCommand comando = new SqlCommand("insert into si_usuarios(usu_documento, usu_tipodoc, usu_nombre, usu_celular, usu_email, usu_genero, usu_aprendiz, usu_egresado, usu_areaformacion, usu_fechaegresado, usu_direccion, usu_barrio, usu_ciudad, usu_departamento) values (@usu_documento, @usu_tipodoc, @usu_nombre, @usu_celular, @usu_email, @usu_genero, @usu_aprendiz, @usu_egresado, @usu_areaformacion, @usu_fechaegresado, @usu_direccion, @usu_barrio, @usu_ciudad, @usu_departamento)", con);
+        SqlCommand comando = new SqlCommand("insert into si_usuarios(usu_documento, usu_tipodoc, usu_nombre, usu_celular, usu_email, usu_genero, usu_aprendiz, usu_egresado, usu_areaformacion, usu_direccion, usu_barrio, usu_ciudad, usu_departamento) values (@usu_documento, @usu_tipodoc, @usu_nombre, @usu_celular, @usu_email, @usu_genero, @usu_aprendiz, @usu_egresado, @usu_areaformacion, @usu_direccion, @usu_barrio, @usu_ciudad, @usu_departamento)", con);
 
             comando.Parameters.Add("@usu_documento", SqlDbType.BigInt);
             comando.Parameters.Add("@usu_tipodoc", SqlDbType.VarChar);
@@ -31,7 +31,7 @@ namespace CasoEstudioEgrasados.Models
             comando.Parameters.Add("@Usu_aprendiz", SqlDbType.Bit);
             comando.Parameters.Add("@Usu_egresado", SqlDbType.Bit);
             comando.Parameters.Add("@Usu_areaformacion", SqlDbType.VarChar);
-            comando.Parameters.Add("@Usu_fechaegresado", SqlDbType.DateTime);
+          //  comando.Parameters.Add("@Usu_fechaegresado", SqlDbType.VarChar);
             comando.Parameters.Add("@Usu_direccion", SqlDbType.VarChar);
             comando.Parameters.Add("@usu_barrio", SqlDbType.VarChar);
             comando.Parameters.Add("@usu_ciudad", SqlDbType.VarChar);
@@ -46,7 +46,7 @@ namespace CasoEstudioEgrasados.Models
             comando.Parameters["@Usu_aprendiz"].Value = usu.Usu_aprendiz;
             comando.Parameters["@Usu_egresado"].Value = usu.Usu_egresado;
             comando.Parameters["@Usu_areaformacion"].Value = usu.Usu_areaformacion;
-            comando.Parameters["@Usu_fechaegresado"].Value = usu.Usu_fechaegresado;
+           // comando.Parameters["@Usu_fechaegresado"].Value = usu.Usu_fechaegresado;
             comando.Parameters["@Usu_direccion"].Value = usu.Usu_direccion;
             comando.Parameters["@usu_barrio"].Value = usu.Usu_barrio;
             comando.Parameters["@usu_ciudad"].Value = usu.Usu_ciudad;
@@ -71,7 +71,7 @@ namespace CasoEstudioEgrasados.Models
                 {
                     Usu_id = int.Parse(registros["usu_id"].ToString()),
                     Usu_documento = int.Parse(registros["usu_documento"].ToString()),
-                   /* Usu_tipodoc = registros["usu_tipodoc"].ToString(),
+                    Usu_tipodoc = registros["usu_tipodoc"].ToString(),
                     Usu_nombre = registros["usu_nombre"].ToString(),
                     Usu_celular = int.Parse(registros["usu_celular"].ToString()),
                     Usu_email = registros["usu_email"].ToString(),
@@ -83,7 +83,7 @@ namespace CasoEstudioEgrasados.Models
                     Usu_direccion = registros["usu_direccion"].ToString(),
                     Usu_barrio = registros["usu_barrio"].ToString(),
                     Usu_ciudad = registros["usu_ciudad"].ToString(),
-                    Usu_departamento = registros["usu_departamento"].ToString(),*/
+                    Usu_departamento = registros["usu_departamento"].ToString(),
                     Usu_fecharegistro = DateTime.Parse(registros["usu_fecharegistro"].ToString())
                 };
                 Usuarios.Add(usu);
