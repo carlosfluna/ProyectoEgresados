@@ -5,121 +5,121 @@
 }
 
 
-<div class="container">
-    <p>
-        @Html.ActionLink("Create New", "Create")
-    </p>
-    <table class="table">
-        <tr>
-            <th>
-                No  @* @Html.DisplayNameFor(model => model.Usu_id) *@
-            </th>
-            <th>
-                Documento @*  @Html.DisplayNameFor(model => model.Usu_documento) *@
-            </th>
-            <th>
-                Tipo Doc @*  @Html.DisplayNameFor(model => model.Usu_tipodoc) *@
-            </th>
-            <th>
-                Nombre @*  @Html.DisplayNameFor(model => model.Usu_nombre) *@
-            </th>
-            <th>
-                Celular @*  @Html.DisplayNameFor(model => model.Usu_celular) *@
-            </th>
-            <th>
-                Email @*  @Html.DisplayNameFor(model => model.Usu_email) *@
-            </th>
-            <th>
-                Genero @*  @Html.DisplayNameFor(model => model.Usu_genero) *@
-            </th>
-            <th>
-                ¿Es Aprendiz? @*  @Html.DisplayNameFor(model => model.Usu_aprendiz) *@
-            </th>
-            <th>
-                ¿Es Egresado?  @*  @Html.DisplayNameFor(model => model.Usu_egresado) *@
-            </th>
-            <th>
-                Area Formacion  @*  @Html.DisplayNameFor(model => model.Usu_areaformacion) *@
-            </th>
-            <th>
-                Fecha Grado  @*  @Html.DisplayNameFor(model => model.Usu_fechaegresado) *@
-            </th>
-            <th>
-                Direccion @*  @Html.DisplayNameFor(model => model.Usu_direccion) *@
-            </th>
-            <th>
-                Barrio @*  @Html.DisplayNameFor(model => model.Usu_barrio) *@
-            </th>
-            <th>
-                Ciudad @*  @Html.DisplayNameFor(model => model.Usu_ciudad) *@
-            </th>
-            <th>
-                Departamento @*  @Html.DisplayNameFor(model => model.Usu_departamento) *@
-            </th>
-            <th>
-                Fecha Registro  @*  @Html.DisplayNameFor(model => model.Usu_fecharegistro) *@
-            </th>
-            <th></th>
-        </tr>
-
-        @foreach (var item in Model)
-        {
+    <div class="container">
+        <p>
+            @Html.ActionLink("Create New", "Create")
+        </p>
+        <table class="table">
             <tr>
-                <td>
-                    @Html.DisplayFor(modelItem => item.Usu_id)
-                </td>
-                <td>
-                    @Html.DisplayFor(modelItem => item.Usu_documento)
-                </td>
-                <td>
-                    @Html.DisplayFor(modelItem => item.Usu_tipodoc)
-                </td>
-                <td>
-                    @Html.DisplayFor(modelItem => item.Usu_nombre)
-                </td>
-                <td>
-                    @Html.DisplayFor(modelItem => item.Usu_celular)
-                </td>
-                <td>
-                    @Html.DisplayFor(modelItem => item.Usu_email)
-                </td>
-                <td>
-                    @Html.DisplayFor(modelItem => item.Usu_genero)
-                </td>
-                <td>
-                    @Html.DisplayFor(modelItem => item.Usu_aprendiz)
-                </td>
-                <td>
-                    @Html.DisplayFor(modelItem => item.Usu_egresado)
-                </td>
-                <td>
-                    @Html.DisplayFor(modelItem => item.Usu_areaformacion)
-                </td>
-                <td>
-                    @Html.DisplayFor(modelItem => item.Usu_fechaegresado)
-                </td>
-                <td>
-                    @Html.DisplayFor(modelItem => item.Usu_direccion)
-                </td>
-                <td>
-                    @Html.DisplayFor(modelItem => item.Usu_barrio)
-                </td>
-                <td>
-                    @Html.DisplayFor(modelItem => item.Usu_ciudad)
-                </td>
-                <td>
-                    @Html.DisplayFor(modelItem => item.Usu_departamento)
-                </td>
-                <td>
-                    @Html.DisplayFor(modelItem => item.Usu_fecharegistro)
-                </td>
-                <td>
-                    @Html.ActionLink("Edit", "Edit", new { /* id=item.PrimaryKey */ }) |
-                    @Html.ActionLink("Details", "Details", new { /* id=item.PrimaryKey */ }) |
-                    @Html.ActionLink("Delete", "Delete", new { /* id=item.PrimaryKey */ })
-                </td>
+                <th>
+                    No  @* @Html.DisplayNameFor(model => model.Usu_id) *@
+                </th>
+                <th>
+                    Documento @*  @Html.DisplayNameFor(model => model.Usu_documento) *@
+                </th>
+                <th>
+                    Tipo Doc @*  @Html.DisplayNameFor(model => model.Usu_tipodoc) *@
+                </th>
+                <th>
+                    Nombre @*  @Html.DisplayNameFor(model => model.Usu_nombre) *@
+                </th>
+                <th>
+                    Celular @*  @Html.DisplayNameFor(model => model.Usu_celular) *@
+                </th>
+                <th>
+                    Email @*  @Html.DisplayNameFor(model => model.Usu_email) *@
+                </th>
+                <th>
+                    Genero @*  @Html.DisplayNameFor(model => model.Usu_genero) *@
+                </th>
+                <th>
+                    ¿Es Aprendiz? @*  @Html.DisplayNameFor(model => model.Usu_aprendiz) *@
+                </th>
+                <th>
+                    ¿Es Egresado?  @*  @Html.DisplayNameFor(model => model.Usu_egresado) *@
+                </th>
+                <th>
+                    Area Formacion  @*  @Html.DisplayNameFor(model => model.Usu_areaformacion) *@
+                </th>
+                <th>
+                    Fecha Grado  @*  @Html.DisplayNameFor(model => model.Usu_fechaegresado) *@
+                </th>
+                <th>
+                    Direccion @*  @Html.DisplayNameFor(model => model.Usu_direccion) *@
+                </th>
+                <th>
+                    Barrio @*  @Html.DisplayNameFor(model => model.Usu_barrio) *@
+                </th>
+                <th>
+                    Ciudad @*  @Html.DisplayNameFor(model => model.Usu_ciudad) *@
+                </th>
+                <th>
+                    Departamento @*  @Html.DisplayNameFor(model => model.Usu_departamento) *@
+                </th>
+                <th>
+                    Fecha Registro  @*  @Html.DisplayNameFor(model => model.Usu_fecharegistro) *@
+                </th>
+                <th></th>
             </tr>
-        }
 
-    </table>
+            @foreach (var item in Model)
+            {
+                <tr>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.Usu_id)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.Usu_documento)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.Usu_tipodoc)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.Usu_nombre)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.Usu_celular)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.Usu_email)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.Usu_genero)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.Usu_aprendiz)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.Usu_egresado)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.Usu_areaformacion)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.Usu_fechaegresado)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.Usu_direccion)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.Usu_barrio)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.Usu_ciudad)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.Usu_departamento)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.Usu_fecharegistro)
+                    </td>
+                    <td>
+                        @Html.ActionLink("Edit", "Edit", new {  id=item.Usu_id  }) |
+                        @Html.ActionLink("Details", "Details", new { id = item.Usu_id }) |
+                        @Html.ActionLink("Delete", "Delete", new { id = item.Usu_id })
+                    </td>
+                </tr>
+            }
+
+        </table>
     </div>

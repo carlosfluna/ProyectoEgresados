@@ -4,9 +4,14 @@ using System.Linq;
 using System.Web;
 
 using System.ComponentModel.DataAnnotations;
+using System.Web.Mvc;
+using System.ComponentModel;
 
 namespace CasoEstudioEgrasados.Models
 {
+   
+ 
+
     public class Usuario
     {
         public int Usu_id { get; set; }
@@ -26,7 +31,7 @@ namespace CasoEstudioEgrasados.Models
         [Required(ErrorMessage = "El email es obligatorio")]
         public string Usu_email { get; set; }
 
-        [Required(ErrorMessage = "El genero es obligatorio")]
+        // [Required(ErrorMessage = "El genero es obligatorio")]
         public string Usu_genero { get; set; }
 
         public bool Usu_aprendiz { get; set; }
@@ -35,7 +40,7 @@ namespace CasoEstudioEgrasados.Models
 
         public string Usu_areaformacion { get; set; }
 
-        public string Usu_fechaegresado { get; set; }
+        public DateTime Usu_fechaegresado { get; set; }
 
         [Required(ErrorMessage = "La direccion es obligatorio")]
         public string Usu_direccion { get; set; }

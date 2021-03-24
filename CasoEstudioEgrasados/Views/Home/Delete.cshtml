@@ -1,0 +1,152 @@
+﻿@model CasoEstudioEgrasados.Models.Usuario
+
+@{
+    ViewBag.Title = "Delete";
+}
+
+<h2>Delete</h2>
+
+<h3>Are you sure you want to delete this?</h3>
+<div>
+    <h4>Usuario</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.Usu_id)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Usu_id)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Usu_documento)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Usu_documento)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Usu_tipodoc)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Usu_tipodoc)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Usu_nombre)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Usu_nombre)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Usu_celular)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Usu_celular)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Usu_email)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Usu_email)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Usu_genero)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Usu_genero)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Usu_aprendiz)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Usu_aprendiz)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Usu_egresado)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Usu_egresado)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Usu_areaformacion)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Usu_areaformacion)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Usu_fechaegresado)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Usu_fechaegresado)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Usu_direccion)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Usu_direccion)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Usu_barrio)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Usu_barrio)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Usu_ciudad)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Usu_ciudad)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Usu_departamento)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Usu_departamento)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Usu_fecharegistro)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Usu_fecharegistro)
+        </dd>
+
+    </dl>
+
+    @using (Html.BeginForm()) {
+        @Html.AntiForgeryToken()
+
+        <div class="form-actions no-color">
+            <input type="submit" value="Delete" class="btn btn-default" /> |
+            @Html.ActionLink("Back to List", "Index")
+        </div>
+    }
+</div>

@@ -9,10 +9,13 @@ namespace CasoEstudioEgrasados.Controllers
 {
     public class HomeController : Controller
     {
+        
         // GET: Home
         public ActionResult Index()
         {
             OperacionUsuarios ou = new OperacionUsuarios();
+            Usuario model = new Usuario();
+            
             return View(ou.RecuperarTodos());
         }
 
@@ -40,11 +43,12 @@ namespace CasoEstudioEgrasados.Controllers
                 Usu_nombre = collection["usu_nombre"],
                 Usu_celular = int.Parse(collection["usu_celular"]),
                 Usu_email = collection["Usu_email"],
-                Usu_genero = collection["usu_genero"],
-                Usu_aprendiz = bool.Parse(collection["usu_aprendiz"].ToString()),
-                Usu_egresado = bool.Parse(collection["usu_egresado"].ToString()),
+                
+            Usu_genero = collection["usu_genero"],
+            //Usu_aprendiz = bool.Parse(collection["usu_aprendiz"].ToString()),
+            //    Usu_egresado = bool.Parse(collection["usu_egresado"].ToString()),
                 Usu_areaformacion = collection["usu_areaformacion"],
-               // Usu_fechaegresado = collection["usu_fechaegresado"],
+                //Usu_fechaegresado = DateTime.Parse(collection["usu_fechaegresado"].ToString()),
                 Usu_direccion = collection["usu_direccion"],
                 Usu_barrio = collection["usu_barrio"],
                 Usu_ciudad = collection["usu_ciudad"],
